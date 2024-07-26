@@ -5,4 +5,6 @@ h1  {   background-color: lightskyblue;
 p   {
     background-color: lightseagreen;
     padding: 0.2rem;
+    font-size: 20px;
+    font-weight: bold;
 }
