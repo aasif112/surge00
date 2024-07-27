@@ -1,0 +1,27 @@
+name: Auto Deploy Changes
+
+on: 
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Setup Node.js environment to use the latest LTS version
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 'lts/*'
+
+      # Install Surge globally
+      - name: Install Surge
+        run: npm install --global surge
+
+      # Deploy to Surge using token from secrets
+      - name: Deploy to Surge
+        run: surge ./ previous-statement.surge.sh --token ${{ secrets.SURGE_TOKEN }}
