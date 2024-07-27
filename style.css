@@ -1,10 +1,16 @@
+body    {    background-color: lightyellow;
+
+}
 h1  {   background-color: lightskyblue;
         padding: 0.2rem;
 }
 
 p   {
-    background-color: lightseagreen;
+    background-color: rgba(213, 213, 68, 0.905);
     padding: 0.2rem;
     font-size: 20px;
     font-weight: bold;
+}
+li  {   background-color: yellow;
+
 }
