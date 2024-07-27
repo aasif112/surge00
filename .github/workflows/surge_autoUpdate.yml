@@ -25,3 +25,4 @@ jobs:
       # Deploy to Surge using token from secrets
       - name: Deploy to Surge
         run: surge ./ previous-statement.surge.sh --token ${{ secrets.SURGE_TOKEN }}
+#Secrete token added
