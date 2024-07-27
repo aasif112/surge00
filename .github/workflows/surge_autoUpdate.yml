@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 'lts/*'
+          node-version: '20'
 
       # Install Surge globally
       - name: Install Surge
@@ -24,4 +24,4 @@ jobs:
 
       # Deploy to Surge using token from secrets
       - name: Deploy to Surge
-        run: surge ./ previous-statement.surge.sh --token $ {{ secrets.SURGE_TOKEN }}
+        run: surge ./ previous-statement.surge.sh --token ${{ secrets.SURGE_TOKEN }}
